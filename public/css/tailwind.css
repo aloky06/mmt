@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium styling overrides to match market standard */
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-800 bg-gray-50;
+  }
+}
+
+@layer components {
+  .premium-card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100;
+  }
+  .premium-btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5;
+  }
+  .premium-input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none bg-gray-50 focus:bg-white;
+  }
+  .glass-header {
+    background-color: transparent !important;
+    border: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 50 !important;
+  }
+  .glass-header a, .glass-header .bravo-logo, .glass-header .bravo-menu { color: white !important; }
+  
+  /* MakeMyTrip + Goibibo Customizations */
+  .bg-mmt-gradient {
+    background: linear-gradient(to bottom, #0a1128 0%, #162a5c 100%);
+  }
+  .bg-go-gradient {
+    background: linear-gradient(90deg, #ff6d38 0%, #ff4155 100%);
+  }
+  .shadow-travel-widget {
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.15);
+  }
+  .travel-tab-active {
+    @apply text-white bg-white/20 rounded-full shadow-inner font-bold border-none !important;
+  }
+  .travel-tab-inactive {
+    @apply text-white/80 hover:bg-white/10 hover:text-white rounded-full transition-all border-none !important;
+  }
+}

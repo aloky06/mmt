@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f8f9fa"/>
+  <g fill="#cbd5e1">
+    <path d="M300 200 h 200 v 300 h -200 z"/>
+    <path d="M360 420 h 80 v 80 h -80 z" fill="#f8f9fa"/>
+    <rect x="340" y="240" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="385" y="240" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="430" y="240" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="340" y="290" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="385" y="290" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="430" y="290" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="340" y="340" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="385" y="340" width="30" height="30" rx="4" fill="#f8f9fa"/>
+    <rect x="430" y="340" width="30" height="30" rx="4" fill="#f8f9fa"/>
+  </g>
+  <text x="50%" y="85%" font-family="sans-serif" font-weight="600" font-size="28" fill="#94a3b8" text-anchor="middle">Hotel Image Not Available</text>
+</svg>
