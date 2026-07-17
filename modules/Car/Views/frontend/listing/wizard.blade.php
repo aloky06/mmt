@@ -285,7 +285,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
 <!-- PROGRESS BAR -->
 <div class="wiz-progress-wrap">
     <div class="wiz-progress-label">
-        <strong id="stepTitle">Step 1 of 10: vehicle Type</strong>
+        <strong id="stepTitle">Step 1 of 13: Vehicle Type</strong>
         <span id="stepPercent">10%</span>
     </div>
     <div class="wiz-progress-bar">
@@ -299,39 +299,39 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
     <!-- SIDEBAR -->
     <div class="wiz-sidebar">
         <div class="wiz-sidebar-group">
-            <div class="wiz-sidebar-group-title">vehicle Basics</div>
+            <div class="wiz-sidebar-group-title">Vehicle Basics</div>
             <div class="wiz-sidebar-item active" data-step="1" onclick="goToStep(1)">
-                <span class="item-icon">1</span> vehicle Type
+                <span class="item-icon">1</span> Vehicle Type
             </div>
             <div class="wiz-sidebar-item" data-step="2" onclick="goToStep(2)">
-                <span class="item-icon">2</span> Car Name &amp; Details
+                <span class="item-icon">2</span> Vehicle Details
             </div>
             <div class="wiz-sidebar-item" data-step="3" onclick="goToStep(3)">
-                <span class="item-icon">3</span> Location &amp; Address
+                <span class="item-icon">3</span> Location &amp; Coverage
             </div>
             <div class="wiz-sidebar-item" data-step="4" onclick="goToStep(4)">
-                <span class="item-icon">4</span> Star Rating
+                <span class="item-icon">4</span> Specifications
             </div>
         </div>
         <div class="wiz-sidebar-group">
-            <div class="wiz-sidebar-group-title">Facilities &amp; Services</div>
+            <div class="wiz-sidebar-group-title">Features &amp; Services</div>
             <div class="wiz-sidebar-item" data-step="5" onclick="goToStep(5)">
-                <span class="item-icon">5</span> Facilities
+                <span class="item-icon">5</span> Features &amp; Amenities
             </div>
             <div class="wiz-sidebar-item" data-step="6" onclick="goToStep(6)">
-                <span class="item-icon">6</span> Services
+                <span class="item-icon">6</span> Services &amp; Availability
             </div>
             <div class="wiz-sidebar-item" data-step="7" onclick="goToStep(7)">
-                <span class="item-icon">7</span> House Rules
+                <span class="item-icon">7</span> Cancellation Policy
             </div>
         </div>
         <div class="wiz-sidebar-group">
-            <div class="wiz-sidebar-group-title">Rooms &amp; Pricing</div>
+            <div class="wiz-sidebar-group-title">Pricing &amp; Details</div>
             <div class="wiz-sidebar-item" data-step="8" onclick="goToStep(8)">
-                <span class="item-icon">8</span> Room Details
+                <span class="item-icon">8</span> Pricing Tiers
             </div>
             <div class="wiz-sidebar-item" data-step="9" onclick="goToStep(9)">
-                <span class="item-icon">9</span> Pricing
+                <span class="item-icon">9</span> Base Price
             </div>
             <div class="wiz-sidebar-item" data-step="10" onclick="goToStep(10)">
                 <span class="item-icon">10</span> Photos
@@ -413,84 +413,81 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
         <div class="wiz-step @if(Auth::check()) active @endif" id="step1">
             <div class="wiz-step-header">
                 <h2>What type of vehicle are you listing?</h2>
-                <p>Select the category that best describes your vehicle. This helps guests find the right accommodation.</p>
+                <p>Select the category that best describes your vehicle. This helps customers book the right cab.</p>
             </div>
             <div class="prop-type-grid">
-                <div class="prop-type-card selected" onclick="selectPropType(this,'Car')">
-                    <span class="prop-type-icon">🏨</span>
-                    <div class="prop-type-name">Car</div>
-                    <div class="prop-type-desc">Full-service Car with dedicated staff</div>
+                <div class="prop-type-card selected" onclick="selectPropType(this,'Sedan')">
+                    <span class="prop-type-icon">🚗</span>
+                    <div class="prop-type-name">Sedan</div>
+                    <div class="prop-type-desc">4-door comfort car, up to 4 passengers</div>
                 </div>
-                <div class="prop-type-card" onclick="selectPropType(this,'apartment')">
-                    <span class="prop-type-icon">🏠</span>
-                    <div class="prop-type-name">Apartment</div>
-                    <div class="prop-type-desc">Self-catering apartment or flat</div>
+                <div class="prop-type-card" onclick="selectPropType(this,'SUV')">
+                    <span class="prop-type-icon">🚙</span>
+                    <div class="prop-type-name">SUV</div>
+                    <div class="prop-type-desc">Spacious SUV, up to 6-7 passengers</div>
                 </div>
-                <div class="prop-type-card" onclick="selectPropType(this,'guesthouse')">
-                    <span class="prop-type-icon">🏡</span>
-                    <div class="prop-type-name">Guest House</div>
-                    <div class="prop-type-desc">Cozy home-style accommodation</div>
+                <div class="prop-type-card" onclick="selectPropType(this,'Hatchback')">
+                    <span class="prop-type-icon">🚘</span>
+                    <div class="prop-type-name">Hatchback</div>
+                    <div class="prop-type-desc">Compact &amp; budget-friendly city cab</div>
                 </div>
-                <div class="prop-type-card" onclick="selectPropType(this,'resort')">
-                    <span class="prop-type-icon">🌴</span>
-                    <div class="prop-type-name">Resort</div>
-                    <div class="prop-type-desc">Luxury resort with amenities</div>
+                <div class="prop-type-card" onclick="selectPropType(this,'Tempo Traveller')">
+                    <span class="prop-type-icon">🚐</span>
+                    <div class="prop-type-name">Tempo Traveller</div>
+                    <div class="prop-type-desc">9-14 seater for group travel</div>
                 </div>
-                <div class="prop-type-card" onclick="selectPropType(this,'hostel')">
-                    <span class="prop-type-icon">🛏️</span>
-                    <div class="prop-type-name">Hostel</div>
-                    <div class="prop-type-desc">Budget-friendly shared accommodation</div>
+                <div class="prop-type-card" onclick="selectPropType(this,'Minivan')">
+                    <span class="prop-type-icon">🚌</span>
+                    <div class="prop-type-name">Minivan / Bus</div>
+                    <div class="prop-type-desc">15-35 seater for large groups</div>
                 </div>
-                <div class="prop-type-card" onclick="selectPropType(this,'villa')">
-                    <span class="prop-type-icon">🏰</span>
-                    <div class="prop-type-name">Villa / Bungalow</div>
-                    <div class="prop-type-desc">Private villa or bungalow</div>
+                <div class="prop-type-card" onclick="selectPropType(this,'Luxury')">
+                    <span class="prop-type-icon">🏎️</span>
+                    <div class="prop-type-name">Luxury / Premium</div>
+                    <div class="prop-type-desc">High-end luxury car for VIP travel</div>
                 </div>
             </div>
-            <input type="hidden" name="vehicle_type" id="vehicle_type" value="Car">
+            <input type="hidden" name="vehicle_type" id="vehicle_type" value="Sedan">
             <div class="wiz-nav">
                 <div></div>
                 <button type="button" class="wiz-btn wiz-btn-next" onclick="nextStep()">Next →</button>
             </div>
         </div>
 
-        <!-- ===== STEP 2: Car Name & Details ===== -->
+        <!-- ===== STEP 2: Vehicle Details ===== -->
         <div class="wiz-step" id="step2">
             <div class="wiz-step-header">
-                <h2>What's your vehicle called?</h2>
-                <p>Enter the official name and a brief description of your vehicle.</p>
+                <h2>Tell us about your vehicle</h2>
+                <p>Enter the vehicle name, description and registration details.</p>
             </div>
             <div class="wiz-card">
                 <div class="wiz-field">
-                    <label class="wiz-label">vehicle Name <span class="req">*</span></label>
-                    <input type="text" name="title" class="wiz-input" placeholder="e.g. The Grand Palace Car" required>
-                    <span class="wiz-input-hint">This is the name guests will see when searching for your vehicle.</span>
+                    <label class="wiz-label">Vehicle / Listing Name <span class="req">*</span></label>
+                    <input type="text" name="title" class="wiz-input" placeholder="e.g. Toyota Innova Crysta - Varanasi" required>
+                    <span class="wiz-input-hint">This is the name customers will see when booking.</span>
                 </div>
                 <div class="wiz-field">
-                    <label class="wiz-label">vehicle Description</label>
-                    <textarea name="content" class="wiz-textarea" rows="4" placeholder="Describe your vehicle — what makes it special, unique features, nearby attractions..."></textarea>
+                    <label class="wiz-label">Vehicle Description</label>
+                    <textarea name="content" class="wiz-textarea" rows="4" placeholder="Describe your vehicle — model year, condition, special features, service area..."></textarea>
                 </div>
                 <div class="wiz-row">
                     <div>
-                        <label class="wiz-label">Check-in Time</label>
-                        <input type="time" name="check_in_time" class="wiz-input" value="14:00">
+                        <label class="wiz-label">Vehicle Model (e.g. Innova)</label>
+                        <input type="text" name="car_model" class="wiz-input" placeholder="e.g. Innova Crysta">
                     </div>
                     <div>
-                        <label class="wiz-label">Check-out Time</label>
-                        <input type="time" name="check_out_time" class="wiz-input" value="12:00">
+                        <label class="wiz-label">Manufacturing Year</label>
+                        <input type="number" name="car_year" class="wiz-input" placeholder="e.g. 2022" min="2000" max="2030">
                     </div>
                 </div>
-                <div class="wiz-field">
-                    <label class="wiz-label">Channel Manager</label>
-                    <div class="wiz-radio-group">
-                        <div class="wiz-radio-item">
-                            <input type="radio" name="channel_manager" id="cm_no" value="no" checked>
-                            <label for="cm_no">No — I manage availability manually</label>
-                        </div>
-                        <div class="wiz-radio-item">
-                            <input type="radio" name="channel_manager" id="cm_yes" value="yes">
-                            <label for="cm_yes">Yes — I use a channel manager (e.g. SiteMinder, RateGain)</label>
-                        </div>
+                <div class="wiz-row">
+                    <div>
+                        <label class="wiz-label">Registration Number</label>
+                        <input type="text" name="number" class="wiz-input" placeholder="e.g. UP65 AB 1234" style="text-transform:uppercase;">
+                    </div>
+                    <div>
+                        <label class="wiz-label">Vehicle Color</label>
+                        <input type="text" name="car_color" class="wiz-input" placeholder="e.g. White, Silver, Black">
                     </div>
                 </div>
             </div>
@@ -504,7 +501,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
         <div class="wiz-step" id="step3">
             <div class="wiz-step-header">
                 <h2>Where is your vehicle located?</h2>
-                <p>Enter the full address. This helps guests find your vehicle easily.</p>
+                <p>Enter your base location and service area. This helps customers know where you operate.</p>
             </div>
             <div class="wiz-card">
                 <div class="wiz-field">
@@ -531,37 +528,47 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
         </div>
 
-        <!-- ===== STEP 4: Star Rating ===== -->
+        <!-- ===== STEP 4: Vehicle Specifications ===== -->
         <div class="wiz-step" id="step4">
             <div class="wiz-step-header">
-                <h2>What's the star rating of your vehicle?</h2>
-                <p>Select the official star classification if applicable. Helps guests set expectations.</p>
+                <h2>Vehicle Specifications</h2>
+                <p>Enter the technical specifications of your vehicle. This helps customers choose the right cab.</p>
             </div>
             <div class="wiz-card">
-                <div class="wiz-stars">
-                    <div class="wiz-star-item">
-                        <input type="radio" name="star_rate" id="star0" value="0" checked>
-                        <label for="star0">Not Rated / Unclassified</label>
+                <div class="wiz-row">
+                    <div>
+                        <label class="wiz-label">Passenger Capacity <span class="req">*</span></label>
+                        <input type="number" name="passenger" class="wiz-input" placeholder="e.g. 4" min="1" max="50">
                     </div>
-                    <div class="wiz-star-item">
-                        <input type="radio" name="star_rate" id="star1" value="1">
-                        <label for="star1"><span class="stars-display">★</span> 1 Star</label>
+                    <div>
+                        <label class="wiz-label">Luggage Bags</label>
+                        <input type="number" name="baggage" class="wiz-input" placeholder="e.g. 2" min="0" max="20">
                     </div>
-                    <div class="wiz-star-item">
-                        <input type="radio" name="star_rate" id="star2" value="2">
-                        <label for="star2"><span class="stars-display">★★</span> 2 Stars</label>
+                </div>
+                <div class="wiz-row">
+                    <div>
+                        <label class="wiz-label">Number of Doors</label>
+                        <input type="number" name="door" class="wiz-input" placeholder="e.g. 4" min="2" max="6">
                     </div>
-                    <div class="wiz-star-item">
-                        <input type="radio" name="star_rate" id="star3" value="3">
-                        <label for="star3"><span class="stars-display">★★★</span> 3 Stars</label>
+                    <div>
+                        <label class="wiz-label">Transmission</label>
+                        <select name="gear" class="wiz-select">
+                            <option value="automatic">Automatic</option>
+                            <option value="manual">Manual</option>
+                        </select>
                     </div>
-                    <div class="wiz-star-item">
-                        <input type="radio" name="star_rate" id="star4" value="4">
-                        <label for="star4"><span class="stars-display">★★★★</span> 4 Stars</label>
-                    </div>
-                    <div class="wiz-star-item">
-                        <input type="radio" name="star_rate" id="star5" value="5">
-                        <label for="star5"><span class="stars-display">★★★★★</span> 5 Stars</label>
+                </div>
+                <div class="wiz-field">
+                    <label class="wiz-label">Air Conditioning</label>
+                    <div class="wiz-radio-group">
+                        <div class="wiz-radio-item">
+                            <input type="radio" name="car_ac" id="ac_yes" value="yes" checked>
+                            <label for="ac_yes">✅ AC Vehicle</label>
+                        </div>
+                        <div class="wiz-radio-item">
+                            <input type="radio" name="car_ac" id="ac_no" value="no">
+                            <label for="ac_no">Non-AC Vehicle</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -571,32 +578,31 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
         </div>
 
-        <!-- ===== STEP 5: Facilities ===== -->
+        <!-- ===== STEP 5: Features & Amenities ===== -->
         <div class="wiz-step" id="step5">
             <div class="wiz-step-header">
-                <h2>What facilities does your vehicle offer?</h2>
-                <p>Select all that apply. This helps guests choose the right vehicle for their needs.</p>
+                <h2>What features does your vehicle offer?</h2>
+                <p>Select all that apply. These features help customers choose the right cab for their journey.</p>
             </div>
             <div class="wiz-card">
                 <div class="wiz-check-grid">
                     @php
                     $facilities = [
-                        'wifi' => '📶 Free WiFi',
-                        'pool' => '🏊 Swimming Pool',
-                        'parking' => '🅿️ Free Parking',
                         'ac' => '❄️ Air Conditioning',
-                        'gym' => '🏋️ Fitness Center',
-                        'restaurant' => '🍽️ Restaurant',
-                        'bar' => '🍸 Bar/Lounge',
-                        'spa' => '💆 Spa & Wellness',
-                        'elevator' => '🛗 Elevator',
-                        'laundry' => '👕 Laundry Service',
-                        'room_service' => '🛎️ Room Service',
-                        'concierge' => '🎩 Concierge',
-                        'business_center' => '💼 Business Center',
-                        'airport_shuttle' => '🚌 Airport Shuttle',
-                        'conference' => '📊 Conference Room',
+                        'music' => '🎵 Music System',
+                        'gps' => '📍 GPS Navigation',
+                        'usb' => '🔌 USB Charging Port',
+                        'wifi' => '📶 In-car WiFi',
+                        'water' => '💧 Complimentary Water',
+                        'first_aid' => '🩺 First Aid Kit',
+                        'child_seat' => '👶 Child Safety Seat',
+                        'luggage_carrier' => '🧳 Roof Luggage Carrier',
                         'pet_friendly' => '🐾 Pet Friendly',
+                        'wheelchair' => '♿ Wheelchair Accessible',
+                        'sanitizer' => '🧴 Hand Sanitizer',
+                        'dashcam' => '📷 Dash Camera',
+                        'night_travel' => '🌙 Night Travel Available',
+                        'toll_included' => '🛣️ Toll Charges Included',
                     ];
                     @endphp
                     @foreach($facilities as $key => $label)
@@ -613,48 +619,39 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
         </div>
 
-        <!-- ===== STEP 6: Services ===== -->
+        <!-- ===== STEP 6: Services & Availability ===== -->
         <div class="wiz-step" id="step6">
             <div class="wiz-step-header">
                 <h2>What services do you offer?</h2>
-                <p>Tell guests about included services and language options.</p>
+                <p>Select the trip types and services you provide. More options = more bookings!</p>
             </div>
             <div class="wiz-card">
-                <div class="wiz-card-title">Breakfast</div>
-                <div class="wiz-radio-group">
-                    <div class="wiz-radio-item">
-                        <input type="radio" name="breakfast" id="bf_no" value="no" checked>
-                        <label for="bf_no">No breakfast included</label>
-                    </div>
-                    <div class="wiz-radio-item">
-                        <input type="radio" name="breakfast" id="bf_yes" value="yes">
-                        <label for="bf_yes">Breakfast included in room rate</label>
-                    </div>
-                    <div class="wiz-radio-item">
-                        <input type="radio" name="breakfast" id="bf_optional" value="optional">
-                        <label for="bf_optional">Breakfast available at extra charge</label>
-                    </div>
+                <div class="wiz-card-title">Trip Types Available</div>
+                <div class="wiz-check-grid">
+                    @php
+                    $tripTypes = [
+                        'local' => '🏙️ Local City Rides',
+                        'outstation' => '🛣️ Outstation / Intercity',
+                        'airport' => '✈️ Airport Transfers',
+                        'oneway' => '➡️ One-Way Trips',
+                        'roundtrip' => '🔄 Round Trips',
+                        'hourly' => '⏰ Hourly Rental',
+                        'wedding' => '💍 Wedding / Events',
+                        'corporate' => '💼 Corporate Travel',
+                        'pilgrimage' => '🛕 Pilgrimage / Religious Tours',
+                        'hill_station' => '⛰️ Hill Station Tours',
+                    ];
+                    @endphp
+                    @foreach($tripTypes as $key => $label)
+                    <label class="wiz-check-item">
+                        <input type="checkbox" name="trip_types[]" value="{{ $key }}">
+                        <label>{{ $label }}</label>
+                    </label>
+                    @endforeach
                 </div>
             </div>
             <div class="wiz-card">
-                <div class="wiz-card-title">Parking</div>
-                <div class="wiz-radio-group">
-                    <div class="wiz-radio-item">
-                        <input type="radio" name="parking" id="pk_no" value="no" checked>
-                        <label for="pk_no">No parking available</label>
-                    </div>
-                    <div class="wiz-radio-item">
-                        <input type="radio" name="parking" id="pk_free" value="free">
-                        <label for="pk_free">Free parking on premises</label>
-                    </div>
-                    <div class="wiz-radio-item">
-                        <input type="radio" name="parking" id="pk_paid" value="paid">
-                        <label for="pk_paid">Paid parking available</label>
-                    </div>
-                </div>
-            </div>
-            <div class="wiz-card">
-                <div class="wiz-card-title">Staff Languages</div>
+                <div class="wiz-card-title">Driver Languages</div>
                 <div class="wiz-check-grid">
                     @php
                     $languages = ['Hindi','English','Tamil','Telugu','Kannada','Malayalam','Marathi','Bengali','Gujarati','Punjabi'];
@@ -673,52 +670,47 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
         </div>
 
-        <!-- ===== STEP 7: House Rules ===== -->
+        <!-- ===== STEP 7: Cancellation Policy ===== -->
         <div class="wiz-step" id="step7">
             <div class="wiz-step-header">
-                <h2>House Rules</h2>
-                <p>Set clear expectations for guests about what's allowed at your vehicle.</p>
+                <h2>Cancellation Policy</h2>
+                <p>Set your cancellation rules so customers know what to expect when they cancel a booking.</p>
             </div>
             <div class="wiz-card">
                 <div class="wiz-field">
-                    <label class="wiz-label">Do you allow children?</label>
+                    <label class="wiz-label">Cancellation Policy Type</label>
                     <div class="wiz-radio-group">
                         <div class="wiz-radio-item">
-                            <input type="radio" name="allow_children" id="ch_yes" value="yes" checked>
-                            <label for="ch_yes">Yes — children of all ages welcome</label>
+                            <input type="radio" name="cancel_policy" id="cp_flexible" value="flexible" checked>
+                            <label for="cp_flexible">✅ Flexible — Full refund if cancelled 24 hours before trip</label>
                         </div>
                         <div class="wiz-radio-item">
-                            <input type="radio" name="allow_children" id="ch_no" value="no">
-                            <label for="ch_no">No — adults only</label>
+                            <input type="radio" name="cancel_policy" id="cp_moderate" value="moderate">
+                            <label for="cp_moderate">🔶 Moderate — 50% refund if cancelled 24 hours before trip</label>
+                        </div>
+                        <div class="wiz-radio-item">
+                            <input type="radio" name="cancel_policy" id="cp_strict" value="strict">
+                            <label for="cp_strict">🔴 Strict — No refund on cancellation</label>
                         </div>
                     </div>
                 </div>
                 <div class="wiz-field" style="margin-top:20px;">
-                    <label class="wiz-label">Do you allow pets?</label>
-                    <div class="wiz-radio-group">
-                        <div class="wiz-radio-item">
-                            <input type="radio" name="allow_pets" id="pet_no" value="no" checked>
-                            <label for="pet_no">No pets allowed</label>
-                        </div>
-                        <div class="wiz-radio-item">
-                            <input type="radio" name="allow_pets" id="pet_yes" value="yes">
-                            <label for="pet_yes">Pets are welcome</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="wiz-field" style="margin-top:20px;">
-                    <label class="wiz-label">Smoking Policy</label>
+                    <label class="wiz-label">Smoking in Vehicle</label>
                     <div class="wiz-radio-group">
                         <div class="wiz-radio-item">
                             <input type="radio" name="smoking" id="sm_no" value="no" checked>
-                            <label for="sm_no">No smoking on the premises</label>
+                            <label for="sm_no">🚭 No smoking allowed in vehicle</label>
                         </div>
                         <div class="wiz-radio-item">
-                            <input type="radio" name="smoking" id="sm_areas" value="areas">
-                            <label for="sm_areas">Smoking allowed in designated areas</label>
+                            <input type="radio" name="smoking" id="sm_yes" value="yes">
+                            <label for="sm_yes">Smoking permitted</label>
                         </div>
                     </div>
                 </div>
+                <div class="wiz-field" style="margin-top:20px;">
+                    <label class="wiz-label">Additional Policies / Notes</label>
+                    <textarea name="extra_policies" class="wiz-textarea" rows="3" placeholder="e.g. Driver waiting time policy, luggage limits, route changes..."></textarea>
+                </div>
             </div>
             <div class="wiz-nav">
                 <button type="button" class="wiz-btn wiz-btn-back" onclick="prevStep()">← Back</button>
@@ -726,65 +718,52 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
         </div>
 
-        <!-- ===== STEP 8: Room Details ===== -->
+        <!-- ===== STEP 8: Pricing Tiers ===== -->
         <div class="wiz-step" id="step8">
             <div class="wiz-step-header">
-                <h2>Tell us about your rooms</h2>
-                <p>Add your room type and basic details. You can add more rooms later from your dashboard.</p>
+                <h2>Set your pricing tiers</h2>
+                <p>Define your rates for different trip types. You can update pricing anytime from your dashboard.</p>
             </div>
             <div class="wiz-card">
-                <div class="wiz-field">
-                    <label class="wiz-label">Room Type Name</label>
-                    <input type="text" name="rooms[0][name]" class="wiz-input" placeholder="e.g. Standard Double Room, Deluxe Suite...">
-                </div>
+                <div class="wiz-card-title" style="font-weight:600;margin-bottom:10px;">Local / City Rides</div>
                 <div class="wiz-row">
                     <div>
-                        <label class="wiz-label">Number of Rooms</label>
-                        <input type="number" name="rooms[0][count]" class="wiz-input" value="1" min="1" max="500">
+                        <label class="wiz-label">Base Fare (₹)</label>
+                        <input type="number" name="local_base_fare" class="wiz-input" placeholder="e.g. 100" min="0">
                     </div>
                     <div>
-                        <label class="wiz-label">Max Guests per Room</label>
-                        <input type="number" name="rooms[0][max_guests]" class="wiz-input" value="2" min="1" max="20">
+                        <label class="wiz-label">Per KM Rate (₹)</label>
+                        <input type="number" name="local_per_km" class="wiz-input" placeholder="e.g. 12" min="0" step="0.50">
                     </div>
                 </div>
+            </div>
+            <div class="wiz-card">
+                <div class="wiz-card-title" style="font-weight:600;margin-bottom:10px;">Outstation / Intercity</div>
                 <div class="wiz-row">
                     <div>
-                        <label class="wiz-label">Bed Type</label>
-                        <select name="rooms[0][bed_type]" class="wiz-select">
-                            <option value="single">Single Bed</option>
-                            <option value="double" selected>Double Bed</option>
-                            <option value="queen">Queen Bed</option>
-                            <option value="king">King Bed</option>
-                            <option value="twin">Twin Beds</option>
-                            <option value="bunk">Bunk Beds</option>
-                        </select>
+                        <label class="wiz-label">One-Way Rate (₹/km)</label>
+                        <input type="number" name="outstation_oneway" class="wiz-input" placeholder="e.g. 14" min="0" step="0.50">
                     </div>
                     <div>
-                        <label class="wiz-label">Room Size (sqm)</label>
-                        <input type="number" name="rooms[0][size]" class="wiz-input" placeholder="e.g. 25">
+                        <label class="wiz-label">Round Trip Rate (₹/km)</label>
+                        <input type="number" name="outstation_roundtrip" class="wiz-input" placeholder="e.g. 11" min="0" step="0.50">
                     </div>
                 </div>
                 <div class="wiz-field">
-                    <label class="wiz-label">Room Amenities</label>
-                    <div class="wiz-check-grid">
-                        @php
-                        $roomAmenities = [
-                            'private_bath' => '🚿 Private Bathroom',
-                            'tv' => '📺 Flat-screen TV',
-                            'mini_fridge' => '🧊 Mini Fridge',
-                            'balcony' => '🌅 Balcony/Terrace',
-                            'safe' => '🔒 In-room Safe',
-                            'desk' => '🖥️ Work Desk',
-                            'wardrobe' => '🚪 Wardrobe',
-                            'hair_dryer' => '💨 Hair Dryer',
-                        ];
-                        @endphp
-                        @foreach($roomAmenities as $key => $label)
-                        <label class="wiz-check-item">
-                            <input type="checkbox" name="rooms[0][amenities][]" value="{{ $key }}">
-                            <label>{{ $label }}</label>
-                        </label>
-                        @endforeach
+                    <label class="wiz-label">Minimum KM per day (Outstation)</label>
+                    <input type="number" name="min_km_day" class="wiz-input" placeholder="e.g. 300" min="0">
+                </div>
+            </div>
+            <div class="wiz-card">
+                <div class="wiz-card-title" style="font-weight:600;margin-bottom:10px;">Hourly Rental</div>
+                <div class="wiz-row">
+                    <div>
+                        <label class="wiz-label">Rate per Hour (₹)</label>
+                        <input type="number" name="hourly_rate" class="wiz-input" placeholder="e.g. 200" min="0">
+                    </div>
+                    <div>
+                        <label class="wiz-label">Included KM per Hour</label>
+                        <input type="number" name="hourly_km" class="wiz-input" placeholder="e.g. 10" min="0">
                     </div>
                 </div>
             </div>
@@ -794,31 +773,31 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
         </div>
 
-        <!-- ===== STEP 9: Pricing ===== -->
+        <!-- ===== STEP 9: Base Price ===== -->
         <div class="wiz-step" id="step9">
             <div class="wiz-step-header">
-                <h2>Set your pricing</h2>
-                <p>Enter the base price per night. You can set room-specific prices after listing approval.</p>
+                <h2>Set your base price</h2>
+                <p>Enter the starting price for a basic trip. You can set detailed pricing from your dashboard after approval.</p>
             </div>
             <div class="wiz-card">
                 <div class="wiz-field">
-                    <label class="wiz-label">Base Price Per Night <span class="req">*</span></label>
+                    <label class="wiz-label">Starting Price <span class="req">*</span></label>
                     <div style="position:relative;">
                         <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-600);font-size:16px;font-weight:600;">₹</span>
                         <input type="number" name="price" class="wiz-input" style="padding-left:34px;" placeholder="0.00" min="0" step="0.01">
                     </div>
-                    <span class="wiz-input-hint">This is the starting/base price. You can set advanced pricing from your dashboard.</span>
+                    <span class="wiz-input-hint">This is the base/starting fare shown to customers. Advanced pricing can be set from your dashboard.</span>
                 </div>
                 <div class="wiz-field">
                     <label class="wiz-label">Price Includes</label>
                     <div class="wiz-radio-group">
                         <div class="wiz-radio-item">
-                            <input type="radio" name="allow_full_day" id="pd_room" value="0" checked>
-                            <label for="pd_room">Room only</label>
+                            <input type="radio" name="allow_full_day" id="pd_exclusive" value="0" checked>
+                            <label for="pd_exclusive">Base fare only (fuel charges extra)</label>
                         </div>
                         <div class="wiz-radio-item">
-                            <input type="radio" name="allow_full_day" id="pd_bf" value="1">
-                            <label for="pd_bf">Breakfast included</label>
+                            <input type="radio" name="allow_full_day" id="pd_inclusive" value="1">
+                            <label for="pd_inclusive">All inclusive (fuel + driver charges included)</label>
                         </div>
                     </div>
                 </div>
@@ -844,7 +823,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
                 </div>
                 <div id="photoPreview" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;"></div>
                 <p style="font-size:12px;color:var(--gray-400);margin-top:12px;">
-                    💡 Tips: Use well-lit photos, include lobby, rooms, bathroom, amenities, and exterior.
+                    💡 Tips: Use well-lit photos — include front, rear, interior, boot space, and driver's seat. Minimum 3 photos recommended.
                 </p>
             </div>
             <div class="wiz-nav">
@@ -935,17 +914,17 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--gray-50);
             </div>
             <div class="wiz-card">
                 <div class="wiz-summary-section">
-                    <div class="wiz-summary-title">vehicle Information</div>
+                    <div class="wiz-summary-title">Vehicle Information</div>
                     <div class="wiz-summary-row">
-                        <span class="sk">vehicle Type</span>
-                        <span class="sv" id="sum_type">Car</span>
+                        <span class="sk">Vehicle Type</span>
+                        <span class="sv" id="sum_type">Sedan</span>
                     </div>
                     <div class="wiz-summary-row">
-                        <span class="sk">vehicle Name</span>
+                        <span class="sk">Vehicle Name</span>
                         <span class="sv" id="sum_title">—</span>
                     </div>
                     <div class="wiz-summary-row">
-                        <span class="sk">Address</span>
+                        <span class="sk">Base Location</span>
                         <span class="sv" id="sum_address">—</span>
                     </div>
                     <div class="wiz-summary-row">
@@ -1006,15 +985,15 @@ const totalSteps = 13;
 
 const stepTitles = [
     '', // placeholder for 0
-    'Step 1 of 13: vehicle Type',
-    'Step 2 of 13: Car Name & Details',
-    'Step 3 of 13: Location & Address',
-    'Step 4 of 13: Star Rating',
-    'Step 5 of 13: Facilities',
-    'Step 6 of 13: Services',
-    'Step 7 of 13: House Rules',
-    'Step 8 of 13: Room Details',
-    'Step 9 of 13: Pricing',
+    'Step 1 of 13: Vehicle Type',
+    'Step 2 of 13: Vehicle Details',
+    'Step 3 of 13: Location & Coverage',
+    'Step 4 of 13: Specifications',
+    'Step 5 of 13: Features & Amenities',
+    'Step 6 of 13: Services & Availability',
+    'Step 7 of 13: Cancellation Policy',
+    'Step 8 of 13: Pricing Tiers',
+    'Step 9 of 13: Base Price',
     'Step 10 of 13: Photos',
     'Step 11 of 13: GST & Tax',
     'Step 12 of 13: Owner Details',
