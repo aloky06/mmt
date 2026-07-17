@@ -35,15 +35,14 @@
             background: #fff;
             align-items: center;
             position: relative;
-            flex-wrap: wrap;
         }
         .search-field {
             flex: 1;
-            padding: 12px 20px;
+            padding: 12px 15px;
             border-right: 1px solid #e0e0e0;
             position: relative;
             cursor: pointer;
-            min-width: 180px;
+            min-width: 0;
         }
         .search-field:last-child {
             border-right: none;
@@ -217,7 +216,7 @@
         /* Swap Button */
         .swap-btn {
             position: absolute;
-            left: 50%;
+            left: 100%;
             top: 50%;
             transform: translate(-50%, -50%);
             width: 36px;
@@ -273,7 +272,8 @@
             }
             .swap-btn {
                 transform: translate(-50%, -50%) rotate(90deg);
-                top: 0;
+                top: 100%;
+                left: 50%;
             }
         }
     </style>
